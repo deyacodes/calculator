@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #b3adb1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedor {
+    display: grid;
+    border-radius: 50px;
+    background: #dad6d9;
+    box-shadow:  20px 20px 60px #b3adb1,
+                -20px -20px 60px #f2e9ef;
+    margin: 50px;
+    padding: 50px 50px;
+    width: min-content;
+}
+
+
+input{
+    border: none;
+    caret-color: #5984c9;
+    background-color: transparent;
+    size: 30px;
+    width: 100%;
+    align-items: flex-end;
+    direction: rtl;   
+    color: black; 
+    font-size:xx-large;
+
+}
+
+.result{
+    color: rgba(85, 85, 85, 0.452);
+    font-size: 1.5rem;
+    float: right;
+    padding-top: 20px;
+}
+
+.delete button{
+    float: right;
+    background: none;
+    border: none;
+    padding: 10px 10px;
+}
+
+span{
+    color: #4471b9;
+}
+
+.teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(5, 60px);
+    background: #fff;
+}
+
+.teclas button {
+    border:  rgb(163, 162, 162);
+    font-size: 1.5rem;
+    color: rgb(43, 41, 41);
+    gap: 1px;
+}
+
+.teclas button:first-child{
+    color: rgb(206, 68, 18);
+}
+
+.teclas button:last-child{
+    background-color: #5984c9;
+    color: white;
+}
+
+.teclas .op{
+    color:#5984c9;
+}
+
+
+.texto {
+    position: relative;
+}
+.texto i {
+    position: absolute;
+    width: 1.5px;
+    height: 80%;
+    background-color: #496ca3;
+    left: 5px;
+    top: 10%;
+    animation-name: blink;
+    animation-duration: 1050ms;
+    animation-iteration-count: infinite;
+}
+
+.texto input:focus + i {
+    display: none;
+}
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
